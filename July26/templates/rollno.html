@@ -1,0 +1,15 @@
+<h1>This page to show student details</h1>
+<hr>
+    <form method="POST">{%csrf_token%}
+        <label for="n1">Number</label>
+        <input name="num" id="n1" type="number" placeholder="Enter number">
+        <br><br>
+        <button>Submit</button> 
+    </form>
+    <h2>Hello,This is the result found:
+        {% if r %}
+            <h2>Results found are: Rollno:{{ r.rollno }}<br>Name:{{ r.name }}<br>CGPA:{{ r.cgpa }}<br>Passed Subjects:{{ r.passed_subjects }}<br>Failed Subjects:{{ r.failed_subjects }}</h2>
+        {% else %}
+            <h2>Sorry da,results not found.</h2>
+        {% endif %}    
+    </h2>

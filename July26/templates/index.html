@@ -1,0 +1,18 @@
+<h1>This page is to check EVEN or ODD</h1>
+<hr>
+    <form method="POST"}>{% csrf_token %}
+    <!-- {{csrf_token}} -->
+    <!-- <br><br> -->
+    <label for="n1">Name</label>
+    <input name="num" id="n1" type="number" placeholder="Enter number">
+    <br><br>
+    <button>Submit</button>
+    
+    </form>
+<h2> Hi guys,response from server: 
+    {% if res %}
+        <h2>This is an EVEN number</h2>
+    {% else %}
+        <h2>This is an ODD number</h2>
+    {% endif %}
+</h2>

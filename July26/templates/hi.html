@@ -1,0 +1,13 @@
+<h1>This page is to check Response</h1>
+<hr>
+    <form method="POST"}>{% csrf_token %}
+    <!-- {{csrf_token}} -->
+    <!-- <br><br> -->
+    <label for="n1">Name</label>
+    <input name="sname" id="n1" type="text" placeholder="Enter name">
+    <br><br>
+    <button>Submit</button>
+    
+    </form>
+<h2> Hi guys,response from server: {{ res }}
+</h2>

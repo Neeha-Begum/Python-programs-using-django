@@ -1,0 +1,18 @@
+<h1>This page is to check greatest between two numbers</h1>
+<hr>
+    <form method="POST">{% csrf_token %}
+        <label for="n1">Number1</label>
+        <input name="num2" id="n1" type="number" placeholder="Enter number">
+        <br><br>
+        <label for="n2">Number2</label>
+        <input name="num3" id="n2" type="number" placeholder="Enter number">
+        <br><br>
+        <button>Submit</button>
+    </form>
+    <h3>Hey guys, This is the answer:
+        {% if res %}
+            <h3>Number1 is greatest than Number2</h3>
+        {% else %}
+            <h3>Number2 is the greatest than Number1</h3>
+        {% endif %}
+    </h3>

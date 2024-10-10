@@ -1,0 +1,15 @@
+<h1>This page is to find Armstrong number</h1>
+<hr>
+<form method="POST">{% csrf_token %}
+    <label for="n1">Number</label>
+    <input name="arm" id="n1" type="number" placeholder="Enter number">
+    <br><br>
+    <button>Submit</button>
+</form>
+<h2>hey Fellas, The result is:
+    {% if armstrong %}
+        <h2>The given number is an armstrong number</h2>
+    {% else %}
+        <h2>The given number is not an armstrong number bro</h2>
+    {% endif %}
+</h2>
